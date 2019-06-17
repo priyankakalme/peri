@@ -1,0 +1,121 @@
+
+iet81@IET22 MINGW64 ~/Desktop (master)
+$ mkdir folder
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop (master)
+$ cd folder
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git init
+Initialized empty Git repository in C:/Users/iet81/Desktop/folder/.git/
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ vim file.txt
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git config --global http.proxy http://192.168.10.2:808
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git config --global usre.name "smitapatil24"
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git config --global user.name "smitapatil124"
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git config --global user.email "smita.patil24041995@gmail.com"
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file.txt
+
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git commit -m "1st"
+[master (root-commit) 2a3193f] 1st
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git remote remove origin
+fatal: No such remote: 'origin'
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git remote add origin https://github.com/smitapatil24/firstrepo.git
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/smitapatil24/firstrepo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git branch cdac
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git checkout cdac
+Switched to branch 'cdac'
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (cdac)
+$ vim file.txt
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (cdac)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (cdac)
+$ git commit -m "commit by cdac"
+[cdac 5348534] commit by cdac
+ 1 file changed, 1 insertion(+)
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (cdac)
+$ git log
+commit 53485343a785a8309a18217a057924c27e291850 (HEAD -> cdac)
+Author: smitapatil124 <smita.patil24041995@gmail.com>
+Date:   Sat Jun 15 19:24:22 2019 +0530
+
+    commit by cdac
+
+commit 2a3193fc6d0ee708254524397a45aa7747053627 (origin/master, master)
+Author: smitapatil124 <smita.patil24041995@gmail.com>
+Date:   Sat Jun 15 19:19:04 2019 +0530
+
+    1st
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (cdac)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git log
+commit 2a3193fc6d0ee708254524397a45aa7747053627 (HEAD -> master, origin/master)
+Author: smitapatil124 <smita.patil24041995@gmail.com>
+Date:   Sat Jun 15 19:19:04 2019 +0530
+
+    1st
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
+$ git merge cdac
+Updating 2a3193f..5348534
+Fast-forward
+ file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+------------------------------------------------------
+iet81@IET22 MINGW64 ~/Desktop/folder (master)
